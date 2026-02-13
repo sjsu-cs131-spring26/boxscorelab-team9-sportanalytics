@@ -23,3 +23,24 @@ cd data
 ```
 
 The script will download, extract, and clean up the dataset automatically.
+
+---
+
+## Sprint 2 – Definition of Done
+
+- [ ] Data Card present in README  
+- [ ] Dataset path verified using `ls -lh`, `wc -l`, `head`  
+- [ ] 1,000-row sample created (header preserved)  
+- [ ] ≥2 frequency tables generated and saved in `out/`  
+- [ ] ≥1 Top-N list generated  
+- [ ] ≥1 skinny table created and deduplicated  
+- [ ] `grep -i` demonstrated  
+- [ ] `grep -v` demonstrated  
+- [ ] `tee` used at least once  
+- [ ] stdout and stderr separated using `>` and `2>`  
+- [ ] Full session captured using `script`  
+- [ ] `run_project2.sh` runs end-to-end  
+- [ ] Raw dataset excluded via `.gitignore`  
+- [ ] Work done via branches → PR → review → merge  
+- [ ] Sprint report completed with findings & limitations  
+
