@@ -1,0 +1,10 @@
+4919 Los Angeles
+3471 Boston
+3308 New York
+3250 Philadelphia
+2976 Detroit
+2742 Chicago
+2643 Milwaukee
+2555 Phoenix
+2514 Atlanta
+2446 Cleveland
