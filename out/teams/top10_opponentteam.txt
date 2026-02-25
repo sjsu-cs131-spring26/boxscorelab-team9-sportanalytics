@@ -1,0 +1,10 @@
+     56 Lakers
+     52 Hawks
+     51 Knicks
+     47 Celtics
+     45 Suns
+     44 76ers
+     39 Warriors
+     39 Spurs
+     38 Bulls
+     37 Jazz
