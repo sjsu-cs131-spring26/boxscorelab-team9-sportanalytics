@@ -1,0 +1,69 @@
+Script started on Tue Feb 17 07:49:21 2026
+Restored session: Tue Feb 17 07:28:26 PST 2026
+
+# Task 1: Verify dataset file sizes, row counts, and inspect headers
+oliver@MacBook-Air-8 The-Box-Score-Lab % ls -lh data/*.csv data/*.parquet
+-rw-r--r--  1 oliver  staff   9.2M Feb  5 01:41 data/Games.csv
+-rw-r--r--  1 oliver  staff   144K Feb  5 01:41 data/LeagueSchedule24_25.csv
+-rw-r--r--  1 oliver  staff   159K Feb  5 01:41 data/LeagueSchedule25_26.csv
+-rw-r--r--  1 oliver  staff   788M Feb  5 01:41 data/PlayByPlay.parquet
+-rw-r--r--  1 oliver  staff   361K Feb  5 01:42 data/Players.csv
+-rw-r--r--  1 oliver  staff   305M Feb  5 01:42 data/PlayerStatistics.csv
+-rw-r--r--  1 oliver  staff   6.8K Feb  5 01:42 data/TeamHistories.csv
+-rw-r--r--  1 oliver  staff    24M Feb  5 01:42 data/TeamStatistics.csv
+
+oliver@MacBook-Air-8 The-Box-Score-Lab % wc -l data/*.csv
+   72704 data/Games.csv
+    1409 data/LeagueSchedule24_25.csv
+    1320 data/LeagueSchedule25_26.csv
+    6682 data/Players.csv
+ 1649713 data/PlayerStatistics.csv
+     141 data/TeamHistories.csv
+  145410 data/TeamStatistics.csv
+ 1877379 total
+
+oliver@MacBook-Air-8 The-Box-Score-Lab % head -n 5 data/Games.csv
+gameId,gameDateTimeEst,hometeamCity,hometeamName,hometeamId,awayteamCity,awayteamName,awayteamId,homeScore,awayScore,winner,gameType,gameSubtype,gameLabel,gameSubLabel,seriesGameNumber,attendance,arenaId,arenaName,arenaCity,arenaState,officials
+22500725,2026-02-03 23:00:00,Portland,Trail Blazers,1610612757,Phoenix,Suns,1610612756,125,130,1610612756,Regular Season,,,,,16092,51,Moda Center,Portland,OR,"Tre Maddox, Jason Goldenberg, Jenna Schroeder"
+22500724,2026-02-03 22:00:00,Golden State,Warriors,1610612744,Philadelphia,76ers,1610612755,94,113,1610612755,Regular Season,,,,,18064,1000011,Chase Center,San Francisco,CA,"Mark Lindsay, Simone Jelks, Ashley Moyer-Gleich"
+22500723,2026-02-03 20:00:00,Oklahoma City,Thunder,1610612760,Orlando,Magic,1610612753,128,92,1610612760,Regular Season,,,,,18203,1000052,Paycom Center,Oklahoma City,OK,"James Capers, Dedric Taylor, Tyler Ricks"
+22500722,2026-02-03 20:00:00,Milwaukee,Bucks,1610612749,Chicago,Bulls,1610612741,131,115,1610612749,Regular Season,,,,,17341,642,Fiserv Forum,Milwaukee,WI,"Zach Zarba, Che Flores, Brandon Schwab"
+
+# Task 2: Build and verify frequency table for home team cities
+oliver@MacBook-Air-8 The-Box-Score-Lab % cut -d',' -f3 data/Games.csv | tail -n +2 | sort | uniq -c | sort -nr > out/freq_hometeamCity.txt
+
+oliver@MacBook-Air-8 The-Box-Score-Lab % head -n 10 out/freq_hometeamCity.txt
+4919 Los Angeles
+3471 Boston
+3308 New York
+3250 Philadelphia
+2976 Detroit
+2742 Chicago
+2643 Milwaukee
+2555 Phoenix
+2514 Atlanta
+2446 Cleveland
+
+# Task 3: Generate and display Top 10 entity list from frequency results
+oliver@MacBook-Air-8 The-Box-Score-Lab % head -n 10 out/freq_hometeamCity.txt > out/top10_hometeamCity.txt
+
+oliver@MacBook-Air-8 The-Box-Score-Lab % cat out/top10_hometeamCity.txt
+4919 Los Angeles
+3471 Boston
+3308 New York
+3250 Philadelphia
+2976 Detroit
+2742 Chicago
+2643 Milwaukee
+2555 Phoenix
+2514 Atlanta
+2446 Cleveland
+
+# Task 4: Demonstrate case-insensitive and exclusion grep searches
+oliver@MacBook-Air-8 The-Box-Score-Lab % grep -i "LOS ANGELES" data/Games.csv | head -n 5 > out/grep_case_insensitive.txt
+
+oliver@MacBook-Air-8 The-Box-Score-Lab % grep -v "Regular Season" data/Games.csv | head -n 5 > out/grep_exclude.txt
+
+oliver@MacBook-Air-8 The-Box-Score-Lab % exit
+
+Script done on Tue Feb 17 08:05:45 2026
