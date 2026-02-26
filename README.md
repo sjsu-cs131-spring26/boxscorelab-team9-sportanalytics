@@ -42,5 +42,33 @@ The script will download, extract, and clean up the dataset automatically.
 - [ ] `run_project2.sh` runs end-to-end  
 - [ ] Raw dataset excluded via `.gitignore`  
 - [ ] Work done via branches → PR → review → merge  
-- [ ] Sprint report completed with findings & limitations  
+- [ ] Sprint report completed with findings & limitations
 
+## Sprint 2 Data Card
+
+**Source**  
+`TeamStatistics.csv` under [Historical NBA Data and Player Box Scores] Data Set. 
+(https://www.kaggle.com/datasets/eoinamoore/historical-nba-data-and-player-box-scores?select=TeamStatisticsScoring.csv)
+
+**Format**  
+CSV, UTF-8 encoding, with a single header row.
+
+**Size**  
+- Full dataset: 24MB, ~145,000 rows, ~33 columns  
+- Sample committed: 1,000 rows (`teamstats_1k.csv`)
+
+**Delimiter & Header**  
+- Delimiter: `,` (comma)  
+- Header row present
+
+**Fields (examples)**  
+- gameDateTimeEst  
+- teamName  
+- opponentTeamName  
+- home  
+- win  
+- threePointersMade  
+- blocks  
+
+**Quality Notes**  
+Some columns contain missing values (empty fields), which required filtering during frequency table generation.

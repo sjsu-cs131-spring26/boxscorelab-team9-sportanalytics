@@ -1,0 +1,10 @@
+   6925 Lakers
+   6910 Celtics
+   6556 Knicks
+   6530 Warriors
+   6514 Pistons
+   6419 Hawks
+   5571 76ers
+   5301 Bulls
+   5188 Rockets
+   5102 Suns
