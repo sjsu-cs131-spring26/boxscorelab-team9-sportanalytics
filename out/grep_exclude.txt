@@ -1,5 +1,0 @@
-gameId,gameDateTimeEst,hometeamCity,hometeamName,hometeamId,awayteamCity,awayteamName,awayteamId,homeScore,awayScore,winner,gameType,gameSubtype,gameLabel,gameSubLabel,seriesGameNumber,attendance,arenaId,arenaName,arenaCity,arenaState,officials
-62500001,2025-12-16 20:30:00,New York,Knicks,1610612752,San Antonio,Spurs,1610612759,124,113,1610612752,Emirates NBA Cup,in-season-knockout,Emirates NBA Cup,Championship,,18609,606,T-Mobile Arena,Las Vegas,NV,"Marc Davis, Brent Barnaky, Nate Green"
-12500007,2025-10-17 22:30:00,Los Angeles,Lakers,1610612747,Sacramento,Kings,1610612758,116,117,1610612758,Preseason,,Preseason,,,16053,1000069,Crypto.com Arena,Los Angeles,CA,"J.T. Orr, Justin Van Duyne, Danielle Scott"
-12500069,2025-10-17 22:00:00,Golden State,Warriors,1610612744,LA,Clippers,1610612746,103,106,1610612746,Preseason,,Preseason,,,18064,1000011,Chase Center,San Francisco,CA,"Tony Brothers, Rodney Mott, Sha'Rae Mitchell"
-12500067,2025-10-17 20:00:00,Oklahoma City,Thunder,1610612760,Denver,Nuggets,1610612743,94,91,1610612760,Preseason,,Preseason,,,,1000052,Paycom Center,Oklahoma City,OK,"Ray Acosta, Natalie Sago, JD Ralls"
