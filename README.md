@@ -24,6 +24,27 @@ cd data
 
 The script will download, extract, and clean up the dataset automatically.
 
+
+## Environment Requirements
+
+This project requires:
+
+- Python 3.9+
+- pandas
+- numpy
+
+If running locally:
+
+    pip install pandas numpy
+
+If running on the IBM server:
+
+    eval "$(micromamba shell hook -s bash)"
+    micromamba activate cs131
+
+Then run:
+
+    ./scripts/run_sprint3.sh data/TeamStatistics.csv ','
 ---
 
 ## Sprint 2 – Definition of Done
