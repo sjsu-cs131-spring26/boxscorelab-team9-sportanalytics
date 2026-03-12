@@ -1,0 +1,88 @@
+Sprint 3 Ops Proof
+Thu Mar 12 01:19:29 EDT 2026
+
+
+Background command:
+nohup ./scripts/run_sprint3.sh data/TeamStatistics.csv "," > out/nohup_run.log 2>&1 &
+
+PID:
+2082780
+
+jobs -l:
+
+ps:
+    PID     ELAPSED CMD
+
+tail out/run_sprint3.log:
+2020s	0.2683
+
+Top-quartile 3PM win% by decade
+1980s	threshold_3PM>=2.00	win_pct=48.55	n=3942
+1990s	threshold_3PM>=6.00	win_pct=56.12	n=6491
+2000s	threshold_3PM>=7.00	win_pct=60.19	n=9438
+2010s	threshold_3PM>=11.00	win_pct=63.80	n=7520
+2020s	threshold_3PM>=15.00	win_pct=66.29	n=5281
+Generating trust_check_missing_stats_by_decade.txt
+TRUST CHECK: MISSINGNESS SUMMARY BY DECADE (1980s TO CURRENT)
+============================================================
+
+decade	rows	blocks_missing	steals_missing	turnovers_missing	threePM_missing
+1980s	20074	10037	10485	10103	0
+1990s	23396	0	0	0	0
+2000s	27106	0	0	0	0
+2010s	27558	0	0	0	0
+2020s	16956	6	6	6	6
+Done
+Thu Mar 12 01:12:26 EDT 2026
+
+tail out/nohup_run.log:
+nohup: ignoring input
+Sprint 3 evidence pack run
+Wed Mar 11 22:10:37 EDT 2026
+Dataset: data/TeamStatistics.csv
+Delimiter: ','
+
+File size
+-rw-r--r-- 1 blessingc jelenag 24M Mar 10 08:22 data/TeamStatistics.csv
+
+Header preview
+gameId,gameDateTimeEst,teamCity,teamName,teamId,opponentTeamCity,opponentTeamName,opponentTeamId,home,win,teamScore,opponentScore,assists,blocks,steals,fieldGoalsAttempted,fieldGoalsMade,fieldGoalsPercentage,threePointersAttempted,threePointersMade,threePointersPercentage,freeThrowsAttempted,freeThrowsMade,freeThrowsPercentage,reboundsDefensive,reboundsOffensive,reboundsTotal,foulsPersonal,turnovers,plusMinusPoints,numMinutes,q1Points,q2Points,q3Points,q4Points,benchPoints,biggestLead,biggestScoringRun,leadChanges,pointsFastBreak,pointsFromTurnovers,pointsInThePaint,pointsSecondChance,timesTied,timeoutsRemaining,seasonWins,seasonLosses,coachId
+22500935,2026-03-09 22:00:00,LA,Clippers,1610612746,New York,Knicks,1610612752,1,1,126,118,25,4,12,93,43,0.462,39,18,0.462,26,22,0.846,27,9,36,19,8,8,240,28,36,24,38,37,15,9,2,19,24,46,11,1,0,32,32,
+22500935,2026-03-09 22:00:00,New York,Knicks,1610612752,LA,Clippers,1610612746,0,0,118,126,32,1,5,90,46,0.511,40,14,0.35,16,12,0.75,37,14,51,23,19,-8,240,24,31,26,37,14,1,8,2,11,10,58,23,1,0,41,25,
+
+Row count
+145845 data/TeamStatistics.csv
+
+Running Python evidence generator: scripts/sprint3.py
+
+---- jobs -l (captured) ----
+
+---- ps for PID 2082780 ----
+    PID     ELAPSED CMD
+
+Re-run for live monitoring proof: Thu Mar 12 01:25:03 EDT 2026
+PID: 2087412
+---- jobs -l (live) ----
+---- ps (live) ----
+    PID     ELAPSED CMD
+---- tail out/run_sprint3.log ----
+2020s	0.2683
+
+Top-quartile 3PM win% by decade
+1980s	threshold_3PM>=2.00	win_pct=48.55	n=3942
+1990s	threshold_3PM>=6.00	win_pct=56.12	n=6491
+2000s	threshold_3PM>=7.00	win_pct=60.19	n=9438
+2010s	threshold_3PM>=11.00	win_pct=63.80	n=7520
+2020s	threshold_3PM>=15.00	win_pct=66.29	n=5281
+Generating trust_check_missing_stats_by_decade.txt
+TRUST CHECK: MISSINGNESS SUMMARY BY DECADE (1980s TO CURRENT)
+============================================================
+
+decade	rows	blocks_missing	steals_missing	turnovers_missing	threePM_missing
+1980s	20074	10037	10485	10103	0
+1990s	23396	0	0	0	0
+2000s	27106	0	0	0	0
+2010s	27558	0	0	0	0
+2020s	16956	6	6	6	6
+Done
+Thu Mar 12 01:12:26 EDT 2026
