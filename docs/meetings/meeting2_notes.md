@@ -19,6 +19,8 @@ Attendees: Oliver Majano, Blessing Cheng, Manuel Rafanan, Minn Naung
 - L1: Correlations describe population-level tendencies across ~145,000 games, not guarantees for individual games. Apply findings to long-term strategy, not single-game decisions.
 - L2: Correlation does not establish causation. Some stats (e.g., steals) may be byproducts of being ahead rather than causes of winning.
 - L3: Data does not separate regular season from playoffs, and playoff basketball may have different statistical dynamics.
+- L4: Dataset structure assumptions must hold for fair comparisons. Our assumption checks confirm win is binary and that most games have exactly two team rows, but there are a small number of anomalies
+- L5: Box score metrics don’t capture opponent strength, injuries, schedule density, or coaching context. Those unmeasured factors may influence outcomes beyond the stats we have tracked and analyzed.
 
 ## Final action items
 - Oliver: Review all evidence artifacts for completeness, update sprint board, and coordinate final review of the Decision Brief. (Due: 2026-03-11) DoD: Sprint board updated with final statuses; brief reviewed and approved by full team.
