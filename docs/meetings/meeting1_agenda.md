@@ -3,7 +3,7 @@ Team: The Box Score Lab
 Date/Time: 2026-03-04 10:00
 Duration: 60 minutes
 Facilitator (PM): Oliver Majano
-Notetaker: Minn Naung
+Notetaker: Oliver Majano
 
 Goal of the meeting:
 Align on one stakeholder persona, one decision question, sprint scope, and assigned action items.
@@ -55,16 +55,16 @@ Candidate evidence artifacts:
 - Assumption test: Three-point volume vs. accuracy - confirm that 3PA (attempts) shows near-zero correlation while 3PM (makes) shows strong correlation in the 2020s, supporting the "accuracy, not volume" finding.
 
 7) Risks and limitations (5 to 10 min)
-- R1: Missing data in early decades (blocks, steals, turnovers, 3-pointers not tracked before the 1970s–80s) could make cross-decade comparisons incomplete or misleading.
+- R1: Missing data in early decades (blocks, steals, turnovers, 3-pointers not tracked before the 1970s-80s) could make cross-decade comparisons incomplete or misleading.
 - R2: Correlation does not equal causation - a stat correlated with winning may be a byproduct of other factors (e.g., steals may reflect already being ahead, not causing the lead).
 - R3: Single-game correlations may not translate to season-level strategy - a team could lose a game with good FG% due to other factors.
 - R4: The dataset does not distinguish between regular season and playoff games, which may have different statistical dynamics.
 
 8) Action items (10 min)
-- Oliver: Draft the correlation heatmap and three-point trend chart. Due: 2026-03-07.
-- Blessing: Build the top-quartile win rate comparison table. Due: 2026-03-07.
-- Manuel: Run the trust check (FG% decade-by-decade verification) and assumption test (3PA vs. 3PM correlation split). Due: 2026-03-07.
-- Minn: Draft the risk register and begin outlining the Decision Brief structure. Due: 2026-03-07.
+- Oliver: Commit Meeting 1 artifacts to repo, set up sprint board with tickets and owners. Due: 2026-03-07.
+- Blessing: Build the correlation heatmap and top-quartile win rate comparison table via scripts. Due: 2026-03-07.
+- Manuel: Write the run_sprint3.sh entry script, generate the trust check (FG% decade-by-decade verification) and assumption test (3PA vs. 3PM correlation split). Due: 2026-03-07.
+- Minn: Draft the risk register, outline the Decision Brief structure, and begin the three-point revolution trend narrative. Due: 2026-03-07.
 
 9) Wrap (2 min)
 Confirmed stakeholder persona (NBA Analytics Director), decision question, and artifact assignments. Next meeting scheduled for 2026-03-09 to review evidence and finalize the brief.
