@@ -45,6 +45,8 @@ If running on the IBM server:
 Then run:
 
     ./scripts/run_sprint3.sh data/TeamStatistics.csv ','
+
+pip install -r requirements.txt
 ---
 
 ## Sprint 2 – Definition of Done
