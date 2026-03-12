@@ -1,0 +1,18 @@
+Assumption Test 1: win column is binary (0,1)
+win_value_counts:
+win
+1.0    57544
+0.0    57544
+NaN        2
+
+win_binary_ok=True
+
+Assumption test 2: duplicate game ID check
+games_with_2_rows=57544
+games_with_only_1_row=2
+games_with_more_than_2_rows=0
+
+Assumption Test 3: contains decade
+total_rows=115090
+rows_missing_year=0
+rows_missing_decade=0
