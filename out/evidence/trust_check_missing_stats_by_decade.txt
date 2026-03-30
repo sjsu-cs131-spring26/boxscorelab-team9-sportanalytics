@@ -1,9 +1,0 @@
-TRUST CHECK: MISSINGNESS SUMMARY BY DECADE (1980s TO CURRENT)
-============================================================
-
-decade	rows	blocks_missing	steals_missing	turnovers_missing	threePM_missing
-1980s	20074	10037	10485	10103	0
-1990s	23396	0	0	0	0
-2000s	27106	0	0	0	0
-2010s	27558	0	0	0	0
-2020s	16956	6	6	6	6
