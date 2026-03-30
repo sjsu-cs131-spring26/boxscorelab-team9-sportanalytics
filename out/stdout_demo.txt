@@ -1,4 +1,0 @@
-data:
-download.sh
-PlayerStatistics.csv
-sample_10k.csv

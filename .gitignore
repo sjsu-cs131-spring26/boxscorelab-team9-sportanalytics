@@ -1,2 +1,6 @@
 /data/*
 !/data/download.sh
+/out/
+/logs/
+/output/
+/results/
