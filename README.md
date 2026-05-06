@@ -25,28 +25,74 @@ cd data
 The script will download, extract, and clean up the dataset automatically.
 
 
+## Cloud Pipeline (Final Sprint)
+
+### How to Run
+
+**1. Upload data to GCS:**
+```bash
+gcloud storage cp data/TeamStatistics.csv gs://hw8-cs131-omajano-1845-bkt/data/TeamStatistics.csv
+```
+
+**2. Create a Dataproc cluster:**
+```bash
+gcloud dataproc clusters create nba-spark-cluster \
+    --region=us-west1 \
+    --zone=us-west1-b \
+    --master-machine-type=e2-standard-2 \
+    --num-workers=2 \
+    --worker-machine-type=e2-standard-2 \
+    --image-version=2.1-debian11 \
+    --enable-component-gateway \
+    --project=hw8-cs131-omajano-1845
+```
+
+**3. Submit the PySpark job:**
+```bash
+gcloud dataproc jobs submit pyspark \
+    gs://hw8-cs131-omajano-1845-bkt/code/cloud_pyspark_job.py \
+    --cluster=nba-spark-cluster \
+    --region=us-west1
+```
+
+**4. Delete the cluster when done:**
+```bash
+gcloud dataproc clusters delete nba-spark-cluster --region=us-west1 --quiet
+```
+
+### Where Data Lives
+
+| What | Location |
+|------|----------|
+| Input CSV | `gs://hw8-cs131-omajano-1845-bkt/data/TeamStatistics.csv` |
+| PySpark job script | `gs://hw8-cs131-omajano-1845-bkt/code/cloud_pyspark_job.py` |
+| Output (Parquet) | `gs://hw8-cs131-omajano-1845-bkt/output/nba_3pt_evolution/` |
+
+### Output Tables (Parquet)
+
+- `decade_summary/` — 3PT stats aggregated by decade
+- `season_trends/` — Season-level trends with YoY delta and cumulative averages
+- `era_comparison/` — Pre-Analytics (1980-2014) vs Analytics Era (2015-2026)
+- `top_teams_by_decade/` — Top 5 teams by 3PA per decade (partitioned by decade)
+- `scoring_composition/` — Points from 2PT, 3PT, and free throws by decade
+
+### Project Files
+
+| File | Description |
+|------|-------------|
+| `scripts/cloud_pyspark_job.py` | Standalone PySpark job for Dataproc |
+| `notebooks/NBA_Viz_Cloud.ipynb` | Visualization notebook (runs on cluster via Jupyter) |
+
 ## Environment Requirements
 
-This project requires:
-
 - Python 3.9+
-- pandas
-- numpy
+- PySpark 3.3+
+- pandas, numpy, matplotlib
 
-If running locally:
-
-    pip install pandas numpy
-
-If running on the IBM server:
-
-    eval "$(micromamba shell hook -s bash)"
-    micromamba activate cs131
-
-Then run:
-
-    ./scripts/run_sprint3.sh data/TeamStatistics.csv ','
-
+```bash
 pip install -r requirements.txt
+```
+
 ---
 
 ## Sprint 2 – Definition of Done
